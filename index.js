@@ -17,6 +17,9 @@ app.use(cors({
     origin:["http://localhost:3000",process.env.FRONTEND_URL]
 }))
 
+app.get("/test",(req,res) => {
+    res.send("hello");
+})
 app.post('/addquiz',(req,res) => {
     const quiz = new QuizModel({...req.body.quiz})
     //     title:req.body.quiz.title,
