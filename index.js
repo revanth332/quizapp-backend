@@ -17,6 +17,9 @@ app.use(passport.initialize());
 //     origin:["http://localhost:3000",process.env.FRONTEND_URL]
 // }))
 
+app.get("/",(req,res) => {
+    res.send("hello");
+})
 app.get("/test",(req,res) => {
     res.send("hello");
 })
