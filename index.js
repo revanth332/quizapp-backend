@@ -6,7 +6,7 @@ const {connectDB,QuizModel,UserModel } = require('./database')
 const jwt = require('jsonwebtoken');
 const { hashSync, compareSync } = require('bcrypt');
 const passport = require('passport')
-const PORT = 5000
+const PORT = process.env.PORT || 5000;
 
 require('./passport')
 
